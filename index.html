@@ -70,7 +70,31 @@
 </tbody></table>
 	</div>
 	
+	<div id="Info"></div>
+<script type="text/javascript">
+	function ejecutarAJAX(){
+		
+		// CON LA SIGUIENTE VARIABLE Y CONDICIÓN VERIFICAMOS QUE TIPO DE NAVEGADOR ESTAMOS OCUPANDO:
+		/*var ajaxRequest;
+		if(window.XMLHttpRequest){ 
+		ajaxRequest = new XMLHttpRequest();} else
+			{ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP")}*/
 	
+		
+		
+	var ajaxRequest = new XMLHttpRequest();
+		// ON READY STATE CHANGE PROCESA LA RESPUESTA PROCESADA POR EL SERVIDOR 
+		
+		ajaxRequest.onreadystatechange = function() { // READY STATE PUEDE TENER VALORES DEL 0 Al 4 SI SU VALOR ES 0 LA PETICiÖN NO HA SIDO INICIALIZADA; SI SU VALOR ES 1 LA PETICIÓN HA SIDO ESTABLECIDA; SI SU VALOR ES 3 SU VALOR HA SIDO PROCESADO; SI SU VALOR ES 4 LA PETICIÓN HA SIDO FINALIZADA)
+			if(ajaxRequest.readyState == 4 && ajaxRequest.status == 200){
+				document.getElementById("Info").innerHTML = ajaxRequest.responseText;
+				
+			}
+		}
+		ajaxRequest.open("GET", "https://www.camara.cl/camara/diputado_detalle.aspx?prmid=925#TAB", true);
+		ajaxRequest.send()
+	}
+</script>
 	<footer id="pie"> <p id="credito"> Elaborado por BUBA93 </p> </footer>
 </body>
 </<html>
