@@ -7,6 +7,13 @@
   src="https://code.jquery.com/jquery-3.4.0.js"
   integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
   crossorigin="anonymous"></script>
+  
+<!-- The Token Agent service - make sure to use your own URL here -->
+<script src='https://token-guy-12098.herokuapp.com/token.js'></script>
+
+<!-- The Instafeed.js library (Don't use this URL in production!) -->
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+
 
 <style>#rudr_instafeed{
   list-style:none  
@@ -72,7 +79,24 @@ h1, footer {
 		</div>
 		<hr>
  
-			
+ <h1 align="left">aleatorio:</h1>			
+
+<!-- Configure and run instafeed -->
+<div id="instafeed"></div>
+ <script>
+  var feed = new Instafeed({
+    accessToken:'IGQVJVRWY4ZAUI3M1ExZA21jRS1vQ1JpX2x5UnFhbTMtVHRfSk5OYVhxUU8xcnJrd29taHY4S2RvbjdPSFdxbzdjYUtLLU9aZAkdFajQycTJVTThXS2lob2RmQVJFeWdoVmhOcVg2TlhYLS01SVhxa3E1YQZDZD',
+	  limit:20,
+	  apiTimeout:100000,
+	
+});
+  
+  feed.run();
+	
+	
+</script>
+<hr>
+<h1 align="left">tatuajes:</h1>			
 	<ul id="rudr_instafeed">
 	<xd id="rudr_instafeed"></xd>
 <script >
@@ -111,23 +135,9 @@ var token = '5526195394.45bbea5.277e803e3051470eaac06504463209db',
 	
 
 <!-- The target container for the images -->
-<div id="instafeed"></div>
 
-<!-- The Token Agent service - make sure to use your own URL here -->
-<script src='https://token-guy-12098.herokuapp.com/token.js'></script>
 
-<!-- The Instafeed.js library (Don't use this URL in production!) -->
-<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
 
-<!-- Configure and run instafeed -->
-<script>
-  var feed = new Instafeed({
-    accessToken:'IGQVJVRWY4ZAUI3M1ExZA21jRS1vQ1JpX2x5UnFhbTMtVHRfSk5OYVhxUU8xcnJrd29taHY4S2RvbjdPSFdxbzdjYUtLLU9aZAkdFajQycTJVTThXS2lob2RmQVJFeWdoVmhOcVg2TlhYLS01SVhxa3E1YQZDZD',
-	  limit:20,
 	
-});
-  
-  feed.run();
-</script>	
 </body>
 </html>
