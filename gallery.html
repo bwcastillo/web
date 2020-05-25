@@ -21,6 +21,40 @@
   max-width:100%;
   max-height:100%;
 }</style>
+
+
+<Style de InstaFeed></Style>
+<style>
+	* {
+  box-sizing: border-box;
+  font-family: sans-serif
+}
+
+h1, footer {
+  max-width: 64rem;
+  margin: 2rem auto;
+}
+
+#instafeed {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0.0rem;
+  grid-row-gap: 0.0rem;
+  max-width: 80rem;
+  margin: auto;
+}
+
+#instafeed a {
+  display: block;
+}
+
+#instafeed img {
+  display: block;
+  width: 100%;
+}
+	
+	</style>
 <link rel="stylesheet" href="e.css">
 </head>
 
@@ -71,62 +105,29 @@ var token = '5526195394.45bbea5.277e803e3051470eaac06504463209db',
  });
 	</script>
 <br>
-	<script>
-	var token2 = '230640025.f7c139c.18f889192e654f4da462d41233dad215',
-    num_photos = 20, // maximum 20
-    container = document.getElementById( 'rudr_instafeed' ), // it is our <ul id="rudr_instafeed">
-    scrElement = document.createElement( 'script' );
-	
- $.ajax({
-	url: 'https://api.instagram.com/v1/users/self/media/recent',
-	dataType: 'jsonp',
-	type: 'GET',
-	data: {access_token: token2, count: num_photos},
-	success: function(data){
- 		console.log(data);
-		for( x in data.data ){
-			$('xd').append('<li><a href= "'+data.data[x].link+'"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>'); 	//- URL of image, 306х306
-			//data.data[x].images.thumbnail.url //- URL of image 150х150
-			//var texto = data.data[x].link //- Instagram post URL - URL of image 612х612
-			//console.log(texto)
-			
-		}
-	},
-	error: function(data){
-		console.log(data);
 		
-	}
+<br>
+<br>
+	
+
+<!-- The target container for the images -->
+<div id="instafeed"></div>
+
+<!-- The Token Agent service - make sure to use your own URL here -->
+<script src='https://token-guy-12098.herokuapp.com/token.js'></script>
+
+<!-- The Instafeed.js library (Don't use this URL in production!) -->
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+
+<!-- Configure and run instafeed -->
+<script>
+  var feed = new Instafeed({
+    accessToken:'IGQVJVRWY4ZAUI3M1ExZA21jRS1vQ1JpX2x5UnFhbTMtVHRfSk5OYVhxUU8xcnJrd29taHY4S2RvbjdPSFdxbzdjYUtLLU9aZAkdFajQycTJVTThXS2lob2RmQVJFeWdoVmhOcVg2TlhYLS01SVhxa3E1YQZDZD',
+	  limit:20,
+	
 });
-	
-	</script>
-	<br>
-	<script>
-	var token3 = 'IGQVJVRWY4ZAUI3M1ExZA21jRS1vQ1JpX2x5UnFhbTMtVHRfSk5OYVhxUU8xcnJrd29taHY4S2RvbjdPSFdxbzdjYUtLLU9aZAkdFajQycTJVTThXS2lob2RmQVJFeWdoVmhOcVg2TlhYLS01SVhxa3E1YQZDZD',
-    num_photos = 20, // maximum 20
-    container = document.getElementById( 'rudr_instafeed' ), // it is our <ul id="rudr_instafeed">
-    scrElement = document.createElement( 'script' );
-	
- $.ajax({
-	url: 'https://api.instagram.com/v1/users/self/media/recent',
-	dataType: 'jsonp',
-	type: 'GET',
-	data: {access_token: token3, count: num_photos},
-	success: function(data){
- 		console.log(data);
-		for( x in data.data ){
-			$('xd').append('<li><a href= "'+data.data[x].link+'"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>'); 	//- URL of image, 306х306
-			//data.data[x].images.thumbnail.url //- URL of image 150х150
-			//var texto = data.data[x].link //- Instagram post URL - URL of image 612х612
-			//console.log(texto)
-			
-		}
-	},
-	error: function(data){
-		console.log(data);
-		
-	}
-});
-	
-	</script>
+  
+  feed.run();
+</script>	
 </body>
 </html>
