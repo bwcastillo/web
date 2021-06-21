@@ -7,17 +7,7 @@
   src="https://code.jquery.com/jquery-3.4.0.js"
   integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
   crossorigin="anonymous"></script>
-  
-<!-- The Token Agent service - make sure to use your own URL here -->
-<script src='https://buba93marihuanaprensa.herokuapp.com/token.js'></script>
-
-<!-- The Instafeed.js library (Don't use this URL in production!) -->
-<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
-<script src='https://buba93marihuanaprensa.herokuapp.com/token.js'></script>
-
-
-
-<style InstaFeed></style>
+ 
 <style>
 	* {
   box-sizing: border-box;
@@ -29,26 +19,17 @@ h1, footer {
   margin: 2rem auto;
 }
 
-#instafeed {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0.0rem;
-  grid-row-gap: 0.0rem;
-  max-width: 80rem;
-  margin: auto;
+.hide {
+  display: none;
 }
-
-#instafeed a {
+    
+.pasaclick:hover + .hide {
   display: block;
-}
+ red;
 
-#instafeed img {
-  display: block;
-  width: 100%;
-}
-	
-	</style>
+}    
+    
+    </style>
 	
 <link rel="stylesheet" href="e.css">
 </head>
@@ -69,24 +50,24 @@ h1, footer {
 		</div>
 		<hr>
  
- <h1 align="left">aleatorio:</h1>			
-
-<!-- Configure and run instafeed -->
-<div id="instafeed">
- <script>
-  var feed = new Instafeed({
-    accessToken: InstagramToken,
-	  limit:20,
-	  apiTimeout:100000,
-	
-});
-  
-  feed.run();
-	</script>
+<div  id="title" class="pasaclick">
+    
+    <h4 >ADULTOS MAYORES</h4>
 </div>
+    
+<div class="hide">
+    <img src=""">
+    </div>
+    
+<div  id="title" class="pasaclick">
+    <h4 id="title">Pintura #2</h4>
+</div>
+    
 
-
-<hr>
+<div class="hide">
+    "wena ke paza"
+    </div>
+    
 
 
 	
