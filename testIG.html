@@ -2,97 +2,77 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Documento sin título</title>
+<title>TATUAJES</title>
+
 <script
   src="https://code.jquery.com/jquery-3.4.0.js"
   integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
   crossorigin="anonymous"></script>
+  
+<!-- The Token Agent service - make sure to use your own URL here -->
+<script src='https://buba93bubatatuajes.herokuapp.com/token.js'></script>
 
-<style>#rudr_instafeed{
-  list-style:none  
-}
-#rudr_instafeed li{
-  float:left;
-  width:200px;
-  height:200px;
-  margin:10px
-}
-#rudr_instafeed li img{
-  max-width:100%;
-  max-height:100%;
-}</style>
+<!-- The Instafeed.js library (Don't use this URL in production!) -->
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
 
+
+		
+<style>
+	* {
+  box-sizing: border-box;
+  font-family: sans-serif
+}
+
+h1, footer {
+  max-width: 64rem;
+  margin: 2rem auto;
+}
+
+#instafeed {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0.0rem;
+  grid-row-gap: 0.0rem;
+  max-width: 80rem;
+  margin: auto;
+}
+
+#instafeed a {
+  display: block;
+}
+
+#instafeed img {
+  display: block;
+  width: 100%;
+}
+	
+	</style>
+		
+<link rel="stylesheet" href="e.css">
 </head>
 
 <body>
-	<div id="portadaLink">
-		<a href="index.html">PORTADA</a>
-		<a href="artisy.html">ARTISY</a>	
-		<a href="gallery.html">RRSSHIT</a> 
-  		<a href="tatuajes.html">TATUAJES</a> 
+
+<div>
+
+				<h1 id="title"><a href="https://www.buba93.cl">BUBA 93 </a> </h1>
+
 		</div>
 		
-			
-	<ul id="rudr_instafeed">
-	<xd id="rudr_instafeed"></xd>
-<script >
-var token = '5526195394.45bbea5.277e803e3051470eaac06504463209db',
-   num_photos = 20, // maximum 20
-    container = document.getElementById( 'rudr_instafeed' ), // it is our <ul id="rudr_instafeed">
-    scrElement = document.createElement( 'script' );
-	
-	 
- $.ajax({
-	url: 'https://api.instagram.com/v1/users/self/media/recent',
-	dataType: 'jsonp',
-	type: 'GET',
-	data: {access_token: token, count: num_photos},
-	success: function(data){
- 		console.log(data);
-		for( x in data.data ){ 
-			$('ul').append('<li><br><a href= "'+data.data[x].link+'"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>'); 
-			//- URL of image, 306х306
-			//data.data[x].images.thumbnail.url //- URL of image 150х150
-			//var texto = data.data[x].link //- Instagram post URL - URL of image 612х612
-			//console.log(texto)
-			
-		}
-	},
-	error: function(data){
-		console.log(data);
-		
-	}
- });
-	</script>
-<br>
-	<script>
-	var token2 = '230640025.f7c139c.18f889192e654f4da462d41233dad215',
-    num_photos = 20, // maximum 20
-    container = document.getElementById( 'rudr_instafeed' ), // it is our <ul id="rudr_instafeed">
-    scrElement = document.createElement( 'script' );
-	
- $.ajax({
-	url: 'https://api.instagram.com/v1/users/self/media/recent',
-	dataType: 'jsonp',
-	type: 'GET',
-	data: {access_token: token2, count: num_photos},
-	success: function(data){
- 		console.log(data);
-		for( x in data.data ){
-			$('xd').append('<li><a href= "'+data.data[x].link+'"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>'); 	//- URL of image, 306х306
-			//data.data[x].images.thumbnail.url //- URL of image 150х150
-			//var texto = data.data[x].link //- Instagram post URL - URL of image 612х612
-			//console.log(texto)
-			
-		}
-	},
-	error: function(data){
-		console.log(data);
-		
-	}
-});
-	
-	</script>
-	
+	<hr>
+
+	<div id="portadaLink">
+		<a href="index.html">FRONTIS</a>
+ 		<a href="artisy.html">COLAB</a>
+ 		<a href="gallery.html">OCIO</a> 	
+  		<a href="tatuajes.html">TATUAJE</a> 
+		</div>
+		<hr>
+
+<h1 align="left">gallery:</h1>	
+
+
 </body>
 </html>
+
