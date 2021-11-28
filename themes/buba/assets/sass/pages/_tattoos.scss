@@ -1,0 +1,19 @@
+.tattoo-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0.0rem;
+    grid-row-gap: 0.0rem;
+    max-width: 80rem;
+    margin: auto;
+
+    a {
+        display: block;
+        margin: 40px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
