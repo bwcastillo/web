@@ -1,5 +1,18 @@
 {{ define "main" }}
 	<main>
-
+		<div id="instafeed" class="tattoo-gallery"></div>
 	</main>
+
+	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script>
+		const InstagramToken = 'IGQVJXdV9VVmRYY0VqeUFpUEpRX05ZAaGEyVFhoNFJxM3V2ck5zSlgyU0FKWmpYeUprZAnJsUjdqdi1lRnJXV3UzcEk5QkZA3Y2NTR0djUTdGcHpIUW1tckhfTlB3ZAkw3Wl80cmxJTGJ3';
+		const feed = new Instafeed({
+			accessToken: InstagramToken,
+			limit:20,
+			apiTimeout:100000,
+			template: '<a href="\{\{link\}\}" target="_blank"><img title="\{\{caption\}\}" src="\{\{image\}\}" /></a>'
+		});
+
+		feed.run();
+	</script>
 {{ end }}
