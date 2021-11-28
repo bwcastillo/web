@@ -1,4 +1,4 @@
-baseURL = 'http://buba93.cl/'
+baseURL = 'https://silviorodrigues.github.io/buba93/'
 languageCode = 'en-us'
 title = 'BUBA 93'
 theme = "buba"
