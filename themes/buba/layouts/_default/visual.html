@@ -1,0 +1,6 @@
+{{ define "main" }}
+	<main>
+        {{- $image := resources.Get "images/visual/cover.png" -}}
+        <img src="{{ $image.Permalink }}" class="align-img" alt="">
+	</main>
+{{ end }}
