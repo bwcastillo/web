@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BUBA 93</title>
+    <link>http://buba93.cl/</link>
+    <description>Recent content on BUBA 93</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://buba93.cl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4 Fun</title>
+      <link>http://buba93.cl/4-fun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://buba93.cl/4-fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tattoo</title>
+      <link>http://buba93.cl/tattoo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://buba93.cl/tattoo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visual</title>
+      <link>http://buba93.cl/visual/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://buba93.cl/visual/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
