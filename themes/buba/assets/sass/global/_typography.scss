@@ -1,3 +1,27 @@
+@import './breakpoints';
+
+.title, .small-title {
+    font-family: 'helvetica', sans-serif;
+    color: #000;
+    font-size: 90px;
+    padding: 8px;
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 60px;
+        word-break: break-word;
+        line-height: 1em;
+    }
+}
+
+.title {
+    font-weight: 700;
+}
+
+.small-title {
+    font-weight: 500;
+}
+
 .paragraph-text {
     font-family: "Andale mono";
 }

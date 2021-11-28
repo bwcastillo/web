@@ -1,5 +1,20 @@
 {{ define "main" }}
 	<main>
-		4-fun template
+		{{ range $section, $.Site.Data.ForFun.sections }}
+			<section class="mb6">
+				<h2 class="small-title">{{ $section.title }}</h2>
+
+				{{ range $item, $section.item }}
+					<div class="mb6">
+						{{- $image := resources.Get $item.img -}}
+						<img src="{{ $image.Permalink }}" class="align-img" alt="{{ $item.subtitle }}">
+
+						<div class="paragraph-text mt3">
+							{{ $item.subtitle }}
+						</div>
+					</div>
+				{{ end }}
+			</section>
+		{{ end }}
 	</main>
 {{ end }}

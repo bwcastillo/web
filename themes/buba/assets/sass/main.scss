@@ -4,9 +4,11 @@
 
 @import './partials/header';
 
-@import './pages/main';
-
 main {
     padding: 80px;
     text-align: center;
+}
+
+.align-img {
+    margin: 0 auto;
 }
