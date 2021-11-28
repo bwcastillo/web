@@ -1,0 +1,4 @@
+---
+title: "Tattoo"
+layout: "tattoo"
+---

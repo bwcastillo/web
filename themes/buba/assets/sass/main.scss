@@ -1,0 +1,12 @@
+@import './global/reset';
+@import './global/typography';
+@import './global/spacing';
+
+@import './partials/header';
+
+@import './pages/main';
+
+main {
+    padding: 80px;
+    text-align: center;
+}

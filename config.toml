@@ -1,0 +1,4 @@
+baseURL = 'http://buba93.cl/'
+languageCode = 'en-us'
+title = 'BUBA 93'
+theme = "buba"
