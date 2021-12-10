@@ -1,0 +1,16 @@
+@import './global/reset';
+@import './global/typography';
+@import './global/spacing';
+
+@import './partials/header';
+
+@import './pages/tattoos';
+
+main {
+    padding: 80px;
+    text-align: center;
+}
+
+.align-img {
+    margin: 0 auto;
+}

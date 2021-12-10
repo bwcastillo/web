@@ -1,0 +1,89 @@
+{
+    "sections": [
+        {
+            "title": ".",
+            "item": [
+                {
+                    "img": "images/4-fun/yop2.png",
+                    "subtitle": "Palabras claves: Cara, Buba93."
+                },
+                {
+                    "img": "images/4-fun/yopTillas2.png",
+                    "subtitle": "Buba93, inferior."
+                }
+            ]
+        },
+        {
+            "title": "Fanzine",
+            "item": [
+                {
+                    "img": "images/4-fun/5_presentaArtisy2.png",
+                    "subtitle": "Palabras clave: Fanzine; Poema"
+                }
+            ]
+        },
+        {
+            "title": "PLACAS TECTÓNICAS",
+            "item": [
+                {
+                    "img": "images/4-fun/disenodigital-03.png",
+                    "subtitle": "Palabras clave: Placas tectónicas."
+                }
+            ]
+        },
+        {
+            "title": "BACO #1",
+            "item": [
+                {
+                    "img": "images/4-fun/avanceDef.png",
+                    "subtitle": "Palabras clave: Recorrido; deriva; resignificación; acceso."
+                }
+            ]
+        },
+        {
+            "title": "IDENTIDAD GLOBAL",
+            "item": [
+                {
+                    "img": "images/4-fun/BW.jpg",
+                    "subtitle": "Bryan Williams Global Brand"
+                }
+            ]
+        },
+        {
+            "title": "BIENAL ARQ. 2019",
+            "item": [
+                {
+                    "img": "images/4-fun/bienal.png",
+                    "subtitle": "Estudio de campo 2017- Propuesta en espacios formales - Proyecto destacado Bienal Arquitectura 2019"
+                }
+            ]
+        },
+        {
+            "title": "IMPRESIÓN 3D",
+            "item": [
+                {
+                    "img": "images/4-fun/foto1.jpg",
+                    "subtitle": "Hermanos Castillo- Bastian - Bryan - Tangible Modeling- Google Earth Engine - R - 3D print"
+                }
+            ]
+        },
+        {
+            "title": "ESCENA",
+            "item": [
+                {
+                    "img": "images/4-fun/yopyEnano2.png",
+                    "subtitle": "Buba93, Rale."
+                }
+            ]
+        },
+        {
+            "title": "ENCARGO LINSAMBARTH",
+            "item": [
+                {
+                    "img": "images/4-fun/encargoPabloExpo.png",
+                    "subtitle": "Buba93, Pablo Linsambarth, 2019"
+                }
+            ]
+        }
+    ]
+}
