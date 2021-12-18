@@ -8,20 +8,24 @@
     font-size: 90px;
     padding: 8px;
     text-transform: uppercase;
-
-    @media (max-width: $breakpoint-desktop) {
-        font-size: 60px;
-        word-break: break-word;
-        line-height: 1em;
-    }
 }
 
 .title {
     font-weight: 700;
+
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 60px;
+        line-height: 1em;
+    }
 }
 
 .small-title {
     font-weight: 500;
+
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 30px;
+        line-height: 1em;
+    }
 }
 
 .paragraph-text {
