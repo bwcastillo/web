@@ -21,6 +21,7 @@
 
 .small-title {
     font-weight: 500;
+    line-height: 1em;
 
     @media (max-width: $breakpoint-desktop) {
         font-size: 30px;

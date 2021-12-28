@@ -1,17 +1,63 @@
 {{ define "main" }}
 <main class="gallery-page">
+  <section class="expanded p4 m6">
+    <div id="close" class="close title">X</div>
+    <img src="http://localhost:1313/images/gallery/11.jpg" alt="">
+    <div class="expanded-description">
+      <div class="small-title p0">
+        Example title
+      </div>
+      <ul class="p0 mt5">
+        <li class="paragraph-text">
+          <strong>Size:</strong> 40x40 cm
+        </li>
+        <li class="paragraph-text">
+          <strong>Technique:</strong> Oil on canvas
+        </li>
+        <li class="paragraph-text">
+          <strong>Year:</strong> 2021
+        </li>
+      </ul>
+      <div class="paragraph-text mt4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quaerat et itaque facere, aperiam a molestias aut vitae ad soluta vero dolorum voluptatum reiciendis ratione necessitatibus commodi officiis impedit!
+      </div>
+    </div>
+  </section>
+
   <section class="grid">
     {{ range sort $.Site.Data.Gallery.data "position" }}
       {{- $image := resources.Get .img -}}
       <img
         src="{{ $image.Permalink }}"
+        class="image"
         style="
           grid-column-end: span {{ .size }};
           grid-row-end: span {{ .size }}
         "
-        alt="" 
+        alt=""
+        data-item="{{. | jsonify}}"
       />
     {{ end }}
   </section>
 </main>
+
+<script>
+  const expandedContainer = document.querySelector('.expanded');
+
+  const showItem = data => {
+    expandedContainer.classList.add('visible');
+  }
+
+  const close = () => {
+    expandedContainer.classList.remove('visible')
+  }
+
+  document.querySelectorAll('.image').forEach(image => {
+    const data = JSON.parse(image.dataset.item);
+
+    image.addEventListener('click', () => showItem(data));
+  });
+
+  document.querySelector('#close').addEventListener('click', () => close())
+</script>
 {{ end }}
