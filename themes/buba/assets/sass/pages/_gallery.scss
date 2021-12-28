@@ -1,0 +1,21 @@
+@import '../global/breakpoints';
+
+.gallery-page {
+    background-color: #f5f5f5;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        gap: 10px;
+        grid-auto-flow: dense;
+        align-items: center;
+
+        @media (max-width: $breakpoint-desktop) {
+            grid-template-columns: 1fr;
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+}

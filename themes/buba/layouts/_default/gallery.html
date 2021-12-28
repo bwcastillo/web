@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main class="gallery-page">
+  <section class="grid">
+    {{ range sort $.Site.Data.Gallery.data "position" }}
+      {{- $image := resources.Get .img -}}
+      <img
+        src="{{ $image.Permalink }}"
+        style="
+          grid-column-end: span {{ .size }};
+          grid-row-end: span {{ .size }}
+        "
+        alt="" 
+      />
+    {{ end }}
+  </section>
+</main>
+{{ end }}
