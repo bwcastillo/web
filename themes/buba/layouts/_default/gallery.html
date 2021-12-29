@@ -71,6 +71,7 @@
     image.addEventListener('click', () => showItem(data));
   });
 
-  document.querySelector('#close').addEventListener('click', () => close())
+  document.querySelector('#close').addEventListener('click', () => close());
+  document.addEventListener('keyup', e => (e.key === "Escape" || e.key === "Esc") && close());
 </script>
 {{ end }}
