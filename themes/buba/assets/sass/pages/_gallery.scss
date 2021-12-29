@@ -23,6 +23,11 @@
             transform: scaleY(1);
         }
 
+        @media (max-width: $breakpoint-desktop) {
+            flex-direction: column;
+            margin: 0!important;
+        }
+
         .close {
             position: absolute;
             right: 20px;
@@ -36,7 +41,7 @@
                 top: 10px;
                 font-size: 40px;
                 position: fixed;
-                right: 20px;
+                right: 15px;
             }
         }
 
@@ -52,14 +57,13 @@
         &-description {
             text-align: left;
 
+            @media (max-width: $breakpoint-desktop) {
+                text-align: center;
+            }
+
             .paragraph-text {
                 font-size: 1.2em;
             }
-        }
-
-        @media (max-width: $breakpoint-desktop) {
-            flex-direction: column;
-            margin: 0!important;
         }
     }
 
