@@ -58,6 +58,7 @@
             text-align: left;
 
             @media (max-width: $breakpoint-desktop) {
+                margin-top: 30px;
                 text-align: center;
             }
 
