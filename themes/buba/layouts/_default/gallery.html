@@ -1,0 +1,77 @@
+{{ define "main" }}
+<main class="gallery-page">
+  <section class="expanded p4 m6">
+    <div id="close" class="close title">X</div>
+    <img src="" id="image">
+    <div class="expanded-description">
+      <div class="small-title p0" id="title"></div>
+      <ul class="p0 mt5">
+        <li class="paragraph-text">
+          <strong>Size:</strong>
+          <span id="dimensions"></span>
+        </li>
+        <li class="paragraph-text">
+          <strong>Technique:</strong>
+          <span id="technique"></span>
+        </li>
+        <li class="paragraph-text">
+          <strong>Year:</strong>
+          <span id="year"></span>
+        </li>
+      </ul>
+      <div class="paragraph-text mt4" id="description"></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    {{ range sort $.Site.Data.Gallery.data "position" }}
+      {{- $image := resources.Get .img -}}
+      <img
+        src="{{ $image.Permalink }}"
+        class="image"
+        style="
+          grid-column-end: span {{ .size }};
+          grid-row-end: span {{ .size }}
+        "
+        alt=""
+        data-item="{{. | jsonify}}"
+      />
+    {{ end }}
+  </section>
+</main>
+
+<script>
+  const expandedContainer = document.querySelector('.expanded');
+  const image = document.querySelector('#image');
+  const title = document.querySelector('#title');
+  const dimensions = document.querySelector('#dimensions');
+  const technique = document.querySelector('#technique');
+  const year = document.querySelector('#year');
+  const description = document.querySelector('#description');
+
+  const showItem = data => {
+    title.innerHTML = data.title;
+    dimensions.innerHTML = data.dimensions;
+    technique.innerHTML = data.technique;
+    year.innerHTML = data.year;
+    description.innerHTML = data.description;
+    image.src = "{{.Site.BaseURL}}" + data.img;
+    image.alt = `${data.title} picture`;
+
+    expandedContainer.classList.add('visible');
+  }
+
+  const close = () => {
+    expandedContainer.classList.remove('visible')
+  }
+
+  document.querySelectorAll('.image').forEach(image => {
+    const data = JSON.parse(image.dataset.item);
+
+    image.addEventListener('click', () => showItem(data));
+  });
+
+  document.querySelector('#close').addEventListener('click', () => close());
+  document.addEventListener('keyup', e => (e.key === "Escape" || e.key === "Esc") && close());
+</script>
+{{ end }}
