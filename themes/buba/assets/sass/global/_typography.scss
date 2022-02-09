@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@500;700&display=swap');
 
-.title, .small-title {
+.title, .small-title, .xs-title {
     font-family: 'Roboto', sans-serif;
     color: #000;
     font-size: 90px;
@@ -27,6 +27,11 @@
         font-size: 30px;
         line-height: 1em;
     }
+}
+
+.xs-title {
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .paragraph-text {
