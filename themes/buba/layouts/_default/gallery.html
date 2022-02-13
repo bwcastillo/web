@@ -1,8 +1,10 @@
 {{ define "main" }}
 <main class="gallery-page">
-  <section class="expanded p4 m6">
+  <section class="expanded p5">
     <div id="close" class="close title">X</div>
-    <img src="" id="image">
+    <div class="expanded-image">
+      <img src="" alt="" id="image">
+    </div>
     <div class="expanded-description">
       <div class="xs-title p0" id="title"></div>
       <ul class="p0 mt3">
@@ -62,7 +64,12 @@
   }
 
   const close = () => {
-    expandedContainer.classList.remove('visible')
+    expandedContainer.classList.remove('visible');
+    document.querySelector('.expanded-image').classList.remove('zoom')
+  }
+
+  const zoom = () => {
+    document.querySelector('.expanded-image').classList.toggle('zoom')
   }
 
   document.querySelectorAll('.image').forEach(image => {
@@ -71,6 +78,7 @@
     image.addEventListener('click', () => showItem(data));
   });
 
+  document.querySelector('.expanded-image').addEventListener('click', e => zoom());
   document.querySelector('#close').addEventListener('click', () => close());
   document.addEventListener('keyup', e => (e.key === "Escape" || e.key === "Esc") && close());
 </script>
