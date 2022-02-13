@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <title>Gallery</title>
-<link rel=stylesheet href=https://buba93.cl/sass/main.min.a0538217a07aeabda3aee2426fcb51eb8c6f93319badb2850ca49c84c9af2883.css>
+<link rel=stylesheet href=https://buba93.cl/sass/main.min.b84f1a6927ff82a0b14903578d58934e19f34f080b9d72c15778e3c36ac296f9.css>
 </head>
 <body>
 <header>
@@ -20,9 +20,11 @@
 </nav>
 </header>
 <main class=gallery-page>
-<section class="expanded p4 m6">
+<section class="expanded p5">
 <div id=close class="close title">X</div>
-<img src id=image>
+<div class=expanded-image>
+<img src alt id=image>
+</div>
 <div class=expanded-description>
 <div class="xs-title p0" id=title></div>
 <ul class="p0 mt3">
@@ -76,6 +78,6 @@
 <img src=https://buba93.cl/images/gallery/31.jpg class=image style="grid-column-end:span 1;grid-row-end:span 1" alt data-item='{"description":"Lorem ipsum dolor sit amet consectetur...","dimensions":"47.5 x 37.5 cm","id":31,"img":"images/gallery/31.jpg","position":31,"size":1,"technique":"Oil on canvas","title":"Tiempos violentos","year":"2021"}'>
 </section>
 </main>
-<script>const expandedContainer=document.querySelector('.expanded'),image=document.querySelector('#image'),title=document.querySelector('#title'),dimensions=document.querySelector('#dimensions'),technique=document.querySelector('#technique'),year=document.querySelector('#year'),description=document.querySelector('#description'),showItem=a=>{title.innerHTML=a.title,dimensions.innerHTML=a.dimensions,technique.innerHTML=a.technique,year.innerHTML=a.year,description.innerHTML=a.description,image.src="https://buba93.cl/"+a.img,image.alt=`${a.title} picture`,expandedContainer.classList.add('visible')},close=()=>{expandedContainer.classList.remove('visible')};document.querySelectorAll('.image').forEach(a=>{const b=JSON.parse(a.dataset.item);a.addEventListener('click',()=>showItem(b))}),document.querySelector('#close').addEventListener('click',()=>close()),document.addEventListener('keyup',a=>(a.key==="Escape"||a.key==="Esc")&&close())</script>
+<script>const expandedContainer=document.querySelector('.expanded'),image=document.querySelector('#image'),title=document.querySelector('#title'),dimensions=document.querySelector('#dimensions'),technique=document.querySelector('#technique'),year=document.querySelector('#year'),description=document.querySelector('#description'),showItem=a=>{title.innerHTML=a.title,dimensions.innerHTML=a.dimensions,technique.innerHTML=a.technique,year.innerHTML=a.year,description.innerHTML=a.description,image.src="https://buba93.cl/"+a.img,image.alt=`${a.title} picture`,expandedContainer.classList.add('visible')},close=()=>{expandedContainer.classList.remove('visible'),document.querySelector('.expanded-image').classList.remove('zoom')},zoom=()=>{document.querySelector('.expanded-image').classList.toggle('zoom')};document.querySelectorAll('.image').forEach(a=>{const b=JSON.parse(a.dataset.item);a.addEventListener('click',()=>showItem(b))}),document.querySelector('.expanded-image').addEventListener('click',a=>zoom()),document.querySelector('#close').addEventListener('click',()=>close()),document.addEventListener('keyup',a=>(a.key==="Escape"||a.key==="Esc")&&close())</script>
 </body>
 </html>
