@@ -2,7 +2,6 @@
 <main>
   {{ range $section, $.Site.Data.ForFun.sections }}
   <section class="mb6">
-    <h2 class="small-title">{{ $section.title }}</h2>
 
     {{ range $item, $section.item }}
       <div class="mt6 about-me">
@@ -13,7 +12,7 @@
           alt="{{ $item.subtitle }}"
         />
   
-        <div class="paragraph-text ml5">{{ $item.subtitle }}</div>
+        <div class="paragraph-text ml5">{{ $item.subtitle | safeHTML }}</div>
     </div>
     {{ end }}
   </section>
