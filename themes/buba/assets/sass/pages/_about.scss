@@ -1,0 +1,21 @@
+.about-me {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+        max-width: 30%;
+    }
+
+    .paragraph-text {
+        text-align: left;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+        flex-direction: column;
+        
+        img {
+            margin-bottom: 30px;
+            max-width: 50%;
+        }
+    }
+}
