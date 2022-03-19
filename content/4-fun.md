@@ -1,4 +1,4 @@
 ---
-title: "4 Fun"
+title: "About me"
 layout: "4-fun"
 ---
