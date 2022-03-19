@@ -1,12 +1,11 @@
 {{ define "main" }}
     <main>
         <p class="paragraph-text mb3">
+            Artista visual/Visual Artist,<br>
             Bryan Williams Castillo Mendoza,<br>
-            Geógrafo/Geographer (profesión/profession), Tatuador/Tattoer (oficio/craft),<br>
-            Artista visual/Visual Artist (oocioso/leisure).
+            Geógrafo/Geographer, Tatuador/Tattoer.
         </p>
-
         {{- $image := resources.Get "images/main/DSC_9632.jpg" -}}
-        <img src="{{ $image.Permalink }}" class="align-img" alt="">
+        <img src="{{ $image.Permalink }}" class="align-img cover-img" alt="">
     </main>
 {{ end }}
